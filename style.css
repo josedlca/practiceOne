@@ -4,9 +4,30 @@ Theme URI: https://github.com/josedlca/practiceOne
 Author: Josedlca
 Author URI: https://github.com/josedlca/practiceOne
 Description:This is a practice page 
-Requires at least: WordPress 4.9.6
 Version: 0.1.1
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 */
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.jumbotron{
+    background-color: #fff;
+}
+
+footer{
+    padding: 3rem 0 3rem 0;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+    }
+}
