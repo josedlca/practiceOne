@@ -1,14 +1,14 @@
 <?php get_header(); ?>
         <main role="main">
-
-            <section class="jumbotron text-center">
+            <section class="jumbotron text-center backgroundImg">
+            <img src="<?php header_image(); ?>" />
                 <div class="container">
-                <h1 class="jumbotron-heading">Album example</h1>
-                <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-                <p>
-                    <a href="#" class="btn btn-primary my-2">Main call to action</a>
-                    <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-                </p>
+                    <h1 class="jumbotron-heading"><?php bloginfo('name'); ?></h1>
+                    <p class="lead text-muted"><?php bloginfo('description'); ?></p>
+                    <p>
+                        <a href="<?php echo get_theme_mod('btn_url', 'http://test.com'); ?>" class="btn btn-primary my-2"><?php echo get_theme_mod('btn_text', 'Read More'); ?></a>
+                        <a href="<?php echo get_theme_mod('btn2_url', 'http://test.com'); ?>" class="btn btn-secondary my-2"><?php echo get_theme_mod('btn2_text', 'Other Button'); ?></a>
+                    </p>
                 </div>
             </section>
 
