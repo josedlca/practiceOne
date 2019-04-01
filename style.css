@@ -18,6 +18,17 @@ Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-me
     -ms-user-select: none;
     user-select: none;
 }
+
+.list-unstyled li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.list-unstyled li a:hover{
+    text-decoration: none;
+}
+
 .jumbotron{
     background-color: #fff;
 }

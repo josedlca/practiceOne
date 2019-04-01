@@ -26,12 +26,19 @@
                     <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
                     </div>
                     <div class="col-sm-4 offset-md-1 py-4">
-                    <h4 class="text-white">Contact</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                        <li><a href="#" class="text-white">Like on Facebook</a></li>
-                        <li><a href="#" class="text-white">Email me</a></li>
-                    </ul>
+                        <h4 class="text-white">Contact</h4>
+                        <?php
+                            wp_nav_menu( array(
+                            'menu'              => 'practiceMenu',
+                            'theme_location'    => 'primary',
+                            'depth'             => 2,
+                            'container'         => 'div',
+                            'container_id'      => 'bs-example-navbar-collapse-1',
+                            'menu_class'        => 'list-unstyled',
+                            'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                            'walker'            => new wp_bootstrap_navwalker())
+                            );
+                        ?>
                     </div>
                 </div>
                 </div>
