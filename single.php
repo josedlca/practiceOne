@@ -17,18 +17,18 @@
                     <div class="row">
                         <?php if(have_posts()) : ?>
                             <?php while(have_posts()) : the_post(); ?>
-                                <div class="col-md-4">
+                                <div class="col-md-12">
                                     <div class="card mb-4 shadow-sm">
                                         <div class='thumbnailPost'>
                                             <?php the_post_thumbnail(); ?>
                                         </div>
                                         <div class="card-body">
-                                            <p class="card-text"><?php the_excerpt(); ?></p>
+                                            <h2 class='postName'><?php the_title(); ?></h2>
+                                            <p class="card-text"><?php the_content(); ?></p>
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <div class="btn-group">
-                                                <a href ="<?php the_permalink(); ?>" class="btn btn-sm btn-outline-secondary">View</a>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                                </div>
+                                                <a class="text-muted" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
+                                                    <?php the_author(); ?>
+                                                </a>
                                                 <small class="text-muted"><?php the_time('F j, Y g:i a'); ?></small>
                                             </div>
                                         </div>
